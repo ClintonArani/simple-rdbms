@@ -1,0 +1,21 @@
+{
+    "name": "users",
+    "schema": {
+        "id": {
+            "type": "INT"
+        },
+        "email": {
+            "type": "STRING"
+        },
+        "name": {
+            "type": "STRING"
+        }
+    },
+    "rows": [
+        {
+            "id": "1",
+            "email": "clintonarani@gmail.com",
+            "name": "Clinton"
+        }
+    ]
+}
