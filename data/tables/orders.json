@@ -1,17 +1,17 @@
 {
-    "name": "users",
+    "name": "orders",
     "schema": {
         "id": {
             "type": "INT",
             "primary": true,
             "unique": false
         },
-        "email": {
-            "type": "TEXT",
+        "user_id": {
+            "type": "INT",
             "primary": false,
-            "unique": true
+            "unique": false
         },
-        "name": {
+        "product": {
             "type": "TEXT",
             "primary": false,
             "unique": false
@@ -19,14 +19,14 @@
     },
     "rows": [
         {
-            "id": "1",
-            "email": "alice@mail.com",
-            "name": "Alice Updated"
+            "id": "101",
+            "user_id": "1",
+            "product": "Laptop"
         },
         {
-            "id": "2",
-            "email": "bob@mail.com",
-            "name": "Bobby"
+            "id": "103",
+            "user_id": "2",
+            "product": "Keyboard"
         }
     ]
 }

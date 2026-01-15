@@ -7,7 +7,7 @@ class Index
     public function add($value, int $rowId): void
     {
         if (isset($this->map[$value])) {
-            throw new Exception("Unique constraint violation on value: $value");
+            throw new Exception("Unique constraint violated for value: $value");
         }
         $this->map[$value] = $rowId;
     }
@@ -17,13 +17,16 @@ class Index
         return $this->map[$value] ?? null;
     }
 
+    public function rebuild(array $rows, string $column): void
+    {
+        $this->map = [];
+        foreach ($rows as $i => $row) {
+            $this->add($row[$column], $i);
+        }
+    }
+
     public function remove($value): void
     {
         unset($this->map[$value]);
-    }
-
-    public function all(): array
-    {
-        return $this->map;
     }
 }
