@@ -6,12 +6,12 @@
             "primary": true,
             "unique": false
         },
-        "email": {
+        "name": {
             "type": "TEXT",
             "primary": false,
-            "unique": true
+            "unique": false
         },
-        "name": {
+        "email": {
             "type": "TEXT",
             "primary": false,
             "unique": false
@@ -20,13 +20,28 @@
     "rows": [
         {
             "id": "1",
-            "email": "alice@mail.com",
-            "name": "Alice Updated"
+            "name": "Clinton Omari",
+            "email": "clintonarani@gmail.com"
         },
         {
             "id": "2",
-            "email": "bob@mail.com",
-            "name": "Bobby"
+            "name": "Alice Mwangi",
+            "email": "alice@company.com"
+        },
+        {
+            "id": "3",
+            "name": "Brian Otieno",
+            "email": "brian@company.com"
+        },
+        {
+            "id": "4",
+            "name": "Cynthia Wanjiku",
+            "email": "cynthia@company.com"
+        },
+        {
+            "id": "5",
+            "name": "Grace Achieng",
+            "email": "grace@company.com"
         }
     ]
 }

@@ -67,28 +67,48 @@ class QueryEngine
 
 private function update(string $sql): string
 {
+    // Match: UPDATE table SET col1=val1, col2=val2 WHERE col=val
     preg_match(
-        '/UPDATE\s+(\w+)\s+SET\s+(\w+)\s*=\s*(.+)\s+WHERE\s+(\w+)\s*=\s*(.+)/i',
+        '/UPDATE\s+(\w+)\s+SET\s+(.+?)\s+WHERE\s+(\w+)\s*=\s*(.+)$/i',
         $sql,
         $m
     );
 
+    if (!isset($m[4])) {
+        throw new Exception("Invalid UPDATE syntax: $sql");
+    }
+
     $table = $this->db->loadTable($m[1]);
+    $whereColumn = $m[3];
+    $whereValue = trim($m[4], " \"'");
 
-    $setColumn   = $m[2];
-    $setValue    = trim($m[3], " \"'");
-    $whereColumn = $m[4];
-    $whereValue  = trim($m[5], " \"'");
+    // Parse SET clauses - split by commas but respect quoted values
+    $setClauses = $m[2];
+    $updates = [];
+    
+    // Simple parsing for "col1=val1, col2=val2"
+    $clauses = explode(',', $setClauses);
+    foreach ($clauses as $clause) {
+        $clause = trim($clause);
+        if (preg_match('/^(\w+)\s*=\s*(.+)$/', $clause, $match)) {
+            $column = $match[1];
+            $value = trim($match[2], " \"'");
+            $updates[$column] = $value;
+        }
+    }
 
-    $count = $table->updateWhere(
-        $whereColumn,
-        $whereValue,
-        $setColumn,
-        $setValue
-    );
+    // Apply updates
+    $count = 0;
+    foreach ($table->rows as &$row) {
+        if ($row[$whereColumn] == $whereValue) {
+            foreach ($updates as $column => $value) {
+                $row[$column] = $value;
+            }
+            $count++;
+        }
+    }
 
     $this->db->saveTable($table);
-
     return "$count row(s) updated";
 }
 

@@ -135,12 +135,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sql'])) {
     <?php endif; ?>
 
     <script>
-        // Hide success messages after 5 seconds
         const msg = document.getElementById('message');
+        const msge = document.getElementById('error');
+
         if(msg && msg.classList.contains('success')) {
             setTimeout(() => { msg.style.display = 'none'; }, 5000);
         }
-        
+
     </script>
 
 </body>

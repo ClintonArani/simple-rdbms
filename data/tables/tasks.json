@@ -1,0 +1,51 @@
+{
+    "name": "tasks",
+    "schema": {
+        "id": {
+            "type": "INT",
+            "primary": true,
+            "unique": false
+        },
+        "title": {
+            "type": "TEXT",
+            "primary": false,
+            "unique": false
+        },
+        "status": {
+            "type": "TEXT",
+            "primary": false,
+            "unique": false
+        },
+        "user_id": {
+            "type": "INT",
+            "primary": false,
+            "unique": false
+        }
+    },
+    "rows": [
+        {
+            "id": "1",
+            "title": "Implement SQL parser",
+            "status": "done",
+            "user_id": "1"
+        },
+        {
+            "id": "2",
+            "title": "Dashboard Design",
+            "status": "in-progress",
+            "user_id": "2"
+        },
+        {
+            "id": "3",
+            "title": "Authentication Implementation",
+            "status": "pending",
+            "user_id": "3"
+        },
+        {
+            "id": "4",
+            "title": "Performance Optimization",
+            "status": "done",
+            "user_id": "1"
+        }
+    ]
+}

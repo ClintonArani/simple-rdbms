@@ -241,3 +241,10 @@ Pesapal Junior Developer Challenge – 2026
 ##  License
 
 This project is for evaluation and educational purposes.
+
+---
+
+## Trivial Web App that Demonstrate my RDBMS
+This project includes a demonstration web application (`task-manager.php`) that showcases basic CRUD operations using our RDBMS. You can view the live implementation through this simple task manager interface. A screenshot of the application is available in `docs/screenshots/task-manager.png` for reference.
+
+---
