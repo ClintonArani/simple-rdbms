@@ -140,6 +140,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sql'])) {
         if(msg && msg.classList.contains('success')) {
             setTimeout(() => { msg.style.display = 'none'; }, 5000);
         }
+        
     </script>
+
 </body>
 </html>

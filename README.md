@@ -1,6 +1,6 @@
 # Simple PHP RDBMS (Pesapal Junior Developer Challenge)
 
-## 📌 Overview
+##  Overview
 
 This project is a **lightweight, file-based Relational Database Management System (RDBMS)** implemented entirely in **pure PHP** without external frameworks or database engines. It was built to demonstrate **core database concepts, system design skills, and low-level problem-solving ability**, as required by the **Pesapal Junior Developer Challenge**.
 
@@ -8,7 +8,7 @@ The system supports a **SQL-like interface**, persistent storage using files, in
 
 ---
 
-## 🎯 Challenge Objectives Addressed
+##  Challenge Objectives Addressed
 
 The implementation intentionally focuses on *fundamentals*, not shortcuts:
 
@@ -22,7 +22,7 @@ This mirrors how early database engines work internally.
 
 ---
 
-## ✨ Features Implemented
+##  Features Implemented
 
 ### Core Database Features
 
@@ -53,7 +53,7 @@ This mirrors how early database engines work internally.
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 simple-rdbms/
@@ -79,7 +79,7 @@ simple-rdbms/
 
 ---
 
-## ▶️ How to Run
+## ▶ How to Run
 
 ### 1. Requirements
 
@@ -108,7 +108,7 @@ rdbms>
 
 ---
 
-## 🧪 Example Usage
+##  Example Usage
 
 ```sql
 CREATE TABLE users (id INT PRIMARY, email STRING UNIQUE, name STRING)
@@ -128,7 +128,7 @@ SELECT * FROM users JOIN orders ON users.id=orders.user_id
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 All screenshots demonstrating usage and outputs are located in:
 
@@ -138,35 +138,35 @@ docs/screenshots/
 
 Below is a complete walkthrough of the implemented features with visual references:
 
-### 🗄️ Table Creation
+###  Table Creation
 
 * **Create users table**
   `1- Create users table.png`
 * **Create orders table**
   `2- Create orders table.png`
 
-### ➕ Insert Operations
+###  Insert Operations
 
 * **Insert users records**
   `3- Insert users.png`
 * **Insert orders records**
   `4- Insert orders.png`
 
-### 📖 Select Queries
+###  Select Queries
 
 * **Select all users**
   `5- Select all users.png`
 * **Select with WHERE clause**
   `6- Select with WHERE clause.png`
 
-### ✏️ Update Operations
+###  Update Operations
 
 * **Update user record**
   `9- Update user record.png`
 * **Verify updated user**
   `10- Verify updated user.png`
 
-### ❌ Delete Operations
+###  Delete Operations
 
 * **Delete user record**
   `7- Delete user record.png`
@@ -175,26 +175,26 @@ Below is a complete walkthrough of the implemented features with visual referenc
 * **Delete order by ID**
   `13- Delete order by ID.png`
 
-### 🔐 Constraints Enforcement
+###  Constraints Enforcement
 
 * **Unique constraint violation**
   `11- Unique constraint violation.png`
 * **Primary key constraint violation**
   `12- Primary key constraint violation.png`
 
-### 🔗 JOIN Queries
+###  JOIN Queries
 
 * **JOIN users and orders**
   `15- JOIN users and orders.png`
 
-### 🖥️ CLI & REPL
+###  CLI & REPL
 
 * **RDBMS CLI startup**
   `16- RDBMS CLI startup.png`
 * **Interactive REPL session**
   `17- Interactive REPL session.png`
 
-### 📦 Final State Validation
+###  Final State Validation
 
 * **Final orders table**
   `14- Final orders table.png`
@@ -211,7 +211,7 @@ These screenshots collectively demonstrate:
 
 ---
 
-## 🧠 Design Notes
+##  Design Notes
 
 * Indexes are implemented using associative arrays (hash maps)
 * Constraints are enforced at insertion/update time
@@ -220,7 +220,7 @@ These screenshots collectively demonstrate:
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 * LEFT / RIGHT JOIN support
 * Multiple WHERE conditions
@@ -230,7 +230,7 @@ These screenshots collectively demonstrate:
 
 ---
 
-## 👤 Author
+##  Author
 
 **Clinton Omari**
 Junior Software Developer
@@ -238,6 +238,6 @@ Pesapal Junior Developer Challenge – 2026
 
 ---
 
-## 📄 License
+##  License
 
 This project is for evaluation and educational purposes.
